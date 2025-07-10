@@ -1,303 +1,3 @@
-/* Basic Resets & Global Styles */
-* {
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    /* Define a traditional color palette */
-    --primary-color: #7a4a2b;   /* Deep earthy brown, like wood or dark saffron */
-    --secondary-color: #a87f5d; /* Lighter earthy brown/tan */
-    --accent-color: #e09f3e;    /* Warm saffron/orange for highlights */
-    --text-color: #333333;     /* Dark grey for readability */
-    --light-bg: #f8f8f8;       /* Very light grey for alternating sections */
-    --white: #ffffff;
-    --off-white: #fdfdfd;
-}
-
-body {
-    font-family: 'Georgia', serif; /* A classic, readable serif font */
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--off-white);
-    scroll-behavior: smooth; /* Smooth scrolling for internal links */
-}
-
-/* Header & Navigation */
-header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky; /* Makes header stick to the top */
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
-}
-
-header .logo h1 {
-    font-family: 'Times New Roman', serif; /* Another classic font for the main title */
-    font-size: 2.2rem;
-    margin: 0;
-    color: var(--white);
-}
-
-nav a {
-    color: var(--white);
-    text-decoration: none;
-    margin-left: 1.5rem;
-    font-size: 1.1rem;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: var(--accent-color); /* Saffron highlight on hover */
-}
-
-/* Hero Section */
-.hero-section {
-    background: url('../images/IMG-20250626-WA0014.jpg') no-repeat center center/cover; /* Placeholder. YOU NEED TO ADD A SERENE IMAGE HERE */
-    color: var(--white);
-    text-align: center;
-    padding: 8rem 2rem; /* Ample padding for a grand feel */
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 70vh; /* Minimum height for the hero section */
-}
-
-/* Overlay for hero image to ensure text readability */
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: 1;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
-
-.hero-content h2 {
-    font-family: 'Playfair Display', serif; /* Elegant font for hero heading */
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-.hero-content p {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
-.button {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: var(--white);
-    padding: 0.8rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease-in-out, transform 0.2s;
-    border: none;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #c78d37; /* Slightly darker saffron on hover */
-    transform: translateY(-2px);
-}
-
-/* Sections General Styling */
-.section-padded {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto; /* Center sections */
-}
-
-.background-light {
-    background-color: var(--light-bg);
-}
-
-h2 {
-    font-family: 'Playfair Display', serif; /* Consistent elegant heading font */
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 2.5rem;
-    position: relative;
-    padding-bottom: 10px; /* Space for underline effect */
-}
-
-h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--accent-color); /* Saffron underline */
-    border-radius: 2px;
-}
-
-/* Content Flex (Image + Text Side-by-Side) */
-.content-flex {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 3rem; /* Space between columns */
-    align-items: center;
-}
-
-.content-flex .text-content {
-    flex: 2; /* Takes more space */
-    min-width: 300px; /* Ensures it doesn't get too small */
-}
-
-.content-flex .image-content {
-    flex: 1; /* Takes less space */
-    min-width: 250px;
-    text-align: center;
-}
-
-.content-flex .image-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Slightly rounded corners for images */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow */
-}
-
-.content-flex.reverse-order-mobile {
-    flex-direction: row;
-}
-
-/* Specific styling for reverse order on mobile */
-@media (max-width: 768px) {
-    .content-flex.reverse-order-mobile {
-        flex-direction: column-reverse; /* Stacks image below text on mobile */
-    }
-}
-
-
-/* Program Grid */
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
-    gap: 2.5rem;
-    margin-top: 2rem;
-}
-
-.program-item {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.program-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-}
-
-.program-item h3 {
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.program-item p {
-    font-size: 1rem;
-}
-
-/* Gallery Grid */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-/* In your css/style.css file */
-.image-grid img {
-    width: 100%;
-    height: auto; /* Remove fixed height and let images stretch proportionally */
-    /* object-fit: cover; <--- REMOVE THIS or change to 'fill' if you want them to stretch */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.image-grid img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-/* Location & Contact */
-address {
-    font-style: normal; /* Removes default italic */
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-}
-
-.whatsapp-button {
-    display: inline-block;
-    background-color: #25d366; /* WhatsApp green */
-    color: var(--white);
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.whatsapp-button:hover {
-    background-color: #1da851;
-}
-
-.call-to-action {
-    text-align: center;
-    margin-top: 2.5rem;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-}
-.call-to-action a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
-}
-.call-to-action a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin-bottom: 0.5rem;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     header {
@@ -307,9 +7,15 @@ footer p {
     }
     nav {
         margin-top: 1rem;
+        display: flex; /* Make the nav a flex container */
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items horizontally when stacked */
+        width: 100%; /* Ensure nav takes full width for centering */
     }
     nav a {
-        margin: 0 0.8rem;
+        margin: 0.5rem 0; /* Adjust margin for vertical stacking, e.g., 0.5rem top/bottom, 0 left/right */
+        padding: 0.5rem 1rem; /* Add some padding for touch targets */
+        width: fit-content; /* Allow links to naturally size */
     }
     .hero-content h2 {
         font-size: 2.5rem;
@@ -340,7 +46,7 @@ footer p {
         font-size: 1.8rem;
     }
     nav a {
-        margin: 0 0.5rem;
+        margin: 0.4rem 0; /* Slightly smaller vertical margin for very small screens */
         font-size: 1rem;
     }
     .hero-content h2 {
@@ -358,4 +64,14 @@ footer p {
     .program-item h3 {
         font-size: 1.4rem;
     }
+}
+
+/* Also, ensure your gallery image fix is in style.css from the previous response: */
+.image-grid img {
+    width: 100%;
+    height: 200px; /* Set a consistent height for gallery images */
+    object-fit: cover; /* This makes images cover the area without being squished, cropping as necessary */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
