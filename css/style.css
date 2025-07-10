@@ -324,19 +324,31 @@ footer p {
     header {
         flex-direction: column;
         text-align: center;
-        padding: 1rem;
+        padding: 1rem 0.5rem; /* Reduced horizontal padding for smaller screens */
+        width: 100%; /* Ensures header spans the full width of the screen */
+        overflow-x: hidden; /* Prevents horizontal scrolling within the header if content overflows */
+        /* You already have position: sticky and top: 0 from your global header, which is good. */
     }
+    
+    /* Ensure the logo text doesn't overflow */
+    header .logo h1 {
+        font-size: 2rem; /* Adjusted font size for better fit on tablets/larger phones */
+        word-wrap: break-word; /* Allows long words to break onto the next line */
+        hyphens: auto; /* Helps with hyphenation for cleaner breaks */
+        max-width: 100%; /* Ensures the logo text doesn't exceed the header's width */
+    }
+
     nav {
         margin-top: 1rem;
-        display: flex; /* FIXED: Make the nav a flex container */
-        flex-direction: column; /* FIXED: Stack nav items vertically */
-        align-items: center; /* FIXED: Center nav items horizontally when stacked */
-        width: 100%; /* FIXED: Ensure nav takes full width for centering */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     nav a {
-        margin: 0.5rem 0; /* FIXED: Adjust margin for vertical stacking */
-        padding: 0.5rem 1rem; /* FIXED: Add some padding for touch targets */
-        width: fit-content; /* FIXED: Allow links to naturally size */
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        width: fit-content;
     }
     .hero-content h2 {
         font-size: 2.5rem;
@@ -356,7 +368,7 @@ footer p {
     }
     .content-flex .text-content,
     .content-flex .image-content {
-        flex: none; /* Remove flex sizing on mobile */
+        flex: none;
         width: 100%;
         min-width: unset;
     }
@@ -364,10 +376,10 @@ footer p {
 
 @media (max-width: 480px) {
     header .logo h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Even smaller font for very small phones */
     }
     nav a {
-        margin: 0.4rem 0; /* Slightly smaller vertical margin for very small screens */
+        margin: 0.4rem 0;
         font-size: 1rem;
     }
     .hero-content h2 {
