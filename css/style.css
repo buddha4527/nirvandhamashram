@@ -23,7 +23,10 @@ body {
     background-color: var(--off-white);
     scroll-behavior: smooth; /* Smooth scrolling for internal links */
 }
-
+/* Hide hamburger button by default on desktop */
+.mobile-menu-toggle {
+    display: none;
+}
 /* Header & Navigation */
 header {
     background-color: var(--primary-color);
@@ -321,59 +324,52 @@ footer p {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem 0.5rem; /* Reduced horizontal padding for smaller screens */
-        width: 100%; /* Ensures header spans the full width of the screen */
-        overflow-x: hidden; /* Prevents horizontal scrolling within the header if content overflows */
-        /* You already have position: sticky and top: 0 from your global header, which is good. */
+    .mobile-menu-toggle {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 0.5rem 1rem;
     }
-    
-    /* Ensure the logo text doesn't overflow */
-    header .logo h1 {
-        font-size: 2rem; /* Adjusted font size for better fit on tablets/larger phones */
-        word-wrap: break-word; /* Allows long words to break onto the next line */
-        hyphens: auto; /* Helps with hyphenation for cleaner breaks */
-        max-width: 100%; /* Ensures the logo text doesn't exceed the header's width */
+
+    #navToggle {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 2rem;
+        cursor: pointer;
     }
 
     nav {
-        margin-top: 1rem;
-        display: flex;
+        display: none; /* Hide menu initially on small screens */
         flex-direction: column;
         align-items: center;
         width: 100%;
+        background-color: var(--primary-color); /* Optional: match header */
+        padding: 1rem 0;
     }
+
+    nav.active {
+        display: flex; /* Show when toggled */
+    }
+
     nav a {
         margin: 0.5rem 0;
         padding: 0.5rem 1rem;
-        width: fit-content;
-    }
-    .hero-content h2 {
-        font-size: 2.5rem;
-    }
-    .hero-content p {
         font-size: 1.1rem;
     }
-    h2 {
-        font-size: 2rem;
-    }
-    .section-padded {
-        padding: 3rem 1.5rem;
-    }
-    .content-flex {
+
+    header {
         flex-direction: column;
-        gap: 2rem;
+        align-items: flex-start;
     }
-    .content-flex .text-content,
-    .content-flex .image-content {
-        flex: none;
-        width: 100%;
-        min-width: unset;
+
+    header .logo h1 {
+        font-size: 2rem;
+        word-wrap: break-word;
+        hyphens: auto;
+        max-width: 100%;
     }
 }
-
 @media (max-width: 480px) {
     header .logo h1 {
         font-size: 1.6rem; /* Even smaller font for very small phones */
