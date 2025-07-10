@@ -1,170 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirvandham Yogashram - A Sanctuary for Inner Peace</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvandham Yogashram - A Sanctuary for Inner Peace</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Basic responsive styling for the YouTube embed */
+        .youtube-embed-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-top: 1.5rem; /* Add some space above the embed */
+            margin-bottom: 1.5rem; /* Add some space below the embed */
+        }
+        .youtube-embed-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="background">
-        <header>
-            <div class="logo">
-                <h1>Nirvandham Yogashram</h1>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <h1>Nirvandham Yogashram</h1>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#guru">Guru Parampara</a>
+                <a href="#programs">Programs</a>
+                <a href="#life">Ashram Life</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#location">Location</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>Discover Your Path to Inner Harmony</h2>
+                <p>Nirvandham Yogashram: Embracing Ancient Wisdom for Modern Peace in Sacred Gujarat.</p>
+                <a href="#programs" class="button">Explore Programs</a>
+            </div>
+        </section>
+
+        <section id="about" class="section-padded">
+            <h2>About Nirvandham Yogashram</h2>
+            <div class="content-flex">
+                <div class="text-content">
+                    <p>Welcome to Nirvandham Yogashram! Shree Nirvandham Yogashram, nestled in the serene and spiritually rich region of Ranavav, Porbandar, Gujarat, is a sacred sanctuary dedicated to the profound practices of traditional yoga and the pursuit of inner transformation.</p>
+
+                    <p>The Ashram was established by Brahmalin Swami Shree Bhajanprakashanand Giriji in the year 1983, following a Dashnami Sanyas Parampara. It stands as a beacon for those seeking to deepen their spiritual journey through Vedanta, Meditation, and Mindful living.</p>
+
+                    <p>Nirvandham Yogashram is primarily established with an aim to spread the message of our Vedic Sanskriti, to teach people about our Darshanas, and to guide interested individuals in the field of spirituality, which is considered our true religion. We particularly follow Vedantic philosophy and Patanjal Yogdarshan, offering a comprehensive approach to holistic well-being and self-realization.</p>
+                </div>
+                <div class="image-content">
+                    <img src="images/IMG-20250626-WA0019.jpg" alt="Exterior view of Nirvandham Yogashram with Om symbol" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="guru" class="section-padded background-light">
+            <h2>Guru Parampara</h2>
+            <div class="content-flex reverse-order-mobile">
+                <div class="image-content">
+                    <img src="images/IMG-20250626-WA0034~2.jpg" alt="Swami Bhajanprakashanand Giri in meditation" loading="lazy">
+                </div>
+                <div class="text-content">
+                    <p>At Nirvandham Yogashram, we are blessed to follow a revered spiritual lineage, honoring the enlightened masters who have guided countless souls towards self-realization. Our practices are deeply influenced by the profound teachings of our beloved Guruji, Barmlin Sadguru Swami Shree Bhajan Prakashanand Giriji Maharaj. The Spiritual wisdom which he earned through his austere Sadhana guides us to move towards Spiritual awakening.</p>
+
+                    <p>Blessings of our Param Guru Brahmalin Swami Satyamitranand Giriji, who established Bharat Mata Mandir Ashram - Haridwar, a Sankaracharya appoint and Mahamandaleshwar remain with us. Swamiji embodied a rare combination of Karmayog, Bhaktiyog, and Gnanyog, offering profound wisdom and compassionate guidance.</p>
+
+                    <p>This lineage ensures that every seeker feels supported on their unique spiritual journey, as our spiritual guides impart wisdom through discourses, guided meditations, and personal consultations, illuminating the path of yoga and inner peace.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="programs" class="section-padded">
+            <h2>Yoga & Spiritual Programs</h2>
+            <div class="program-grid">
+                <div class="program-item">
+                    <h3>Daily Yoga & Meditation</h3>
+                    <p>Engage in structured daily sessions designed to harmonize body, mind, and spirit. Our practices include Hatha Yoga, Pranayama (breathing techniques), and various meditation styles suitable for all levels.</p>
+                </div>
+                <div class="program-item">
+                    <h3>Spiritual Retreats</h3>
+                    <p>Immerse yourself in transformative retreats focusing on specific themes, such as silent meditation, Vedanta studies, or intensive yoga workshops. These programs offer a deeper dive into spiritual wisdom.</p>
+                </div>
+                <div class="program-item">
+                    <h3>Discourses & Satsangs</h3>
+                    <p>Participate in inspiring discourses and satsangs (spiritual gatherings) where ancient scriptures are expounded, and practical wisdom for daily living is shared by revered teachers. You can find materials like satsangs, pravacans, and photos connected to our Guruji.</p>
+                </div>
+                <div class="program-item">
+                    <h3>Wellness & Healing Sessions</h3>
+                    <p>Discover holistic well-being through special sessions aimed at physical and mental rejuvenation, complementing your yogic practice.</p>
+                </div>
+            </div>
+            <p class="call-to-action">For detailed schedules and upcoming retreat dates, please contact us.</p>
+        </section>
+
+        <section id="life" class="section-padded background-light">
+            <h2>Ashram Life Experience</h2>
+            <div class="content-flex">
+                <div class="text-content">
+                    <p>Life at Nirvandham Yogashram is an opportunity to embrace simplicity, mindfulness, and community living. We offer humble and comfortable accommodation designed to facilitate introspection and peace, allowing guests to disconnect from worldly distractions.</p>
+
+                    <p>All meals provided are sattvic – wholesome, vegetarian food prepared with love and care, promoting purity of body and mind. The daily routine includes collective prayers, yoga, meditation, selfless service (karma yoga), and periods of reflection, fostering a disciplined yet enriching environment.</p>
+
+                    <p>Our aim is to provide a supportive atmosphere where individuals can experience a deeper connection with themselves and the spiritual essence of life.</p>
+                </div>
+                <div class="image-content">
+                    <img src="images/IMG-20250626-WA0028.jpg" alt="Lush green lawn and ashram buildings" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-padded">
+            <h2>What Our Visitors Say</h2>
+            <div class="testimonials-grid">
+                <p>Stay tuned! Testimonials from our cherished visitors will be shared here soon, reflecting their transformative experiences at Nirvandham Yogashram.</p>
+                </div>
+            <p class="call-to-action">Have you visited us? Share your experience by contacting us!</p>
+        </section>
+
+        <section id="gallery" class="section-padded background-light">
+            <h2>Gallery</h2>
+            <p>Explore glimpses of Nirvandham Yogashram – our sacred spaces, daily activities, and the serene environment that fosters spiritual growth.</p>
+            <div class="image-grid">
+                <img src="images/IMG-20250626-WA0017.jpg" alt="Nirvandham Yogashram Main Gate" loading="lazy">
+                <img src="images/IMG-20250626-WA0021.jpg" alt="Main Temple/Prayer Hall Building" loading="lazy">
+                <img src="images/IMG-20250626-WA0020.jpg" alt="Small shrine with red flag" loading="lazy">
+                <img src="images/IMG-20250626-WA0023.jpg" alt="Ashram building with orange roof" loading="lazy">
+                <img src="images/IMG-20250626-WA0018.jpg" alt="Ashram building exterior view" loading="lazy">
+                <img src="images/IMG-20250626-WA0022.jpg" alt="Ashram building with tall trees" loading="lazy">
+                <img src="images/IMG-20250626-WA0031.jpg" alt="Ashram building entrance and porch" loading="lazy">
+                <img src="images/IMG-20250626-WA0027.jpg" alt="Ashram building nestled among trees" loading="lazy">
+                <img src="images/IMG-20250626-WA0016.jpg" alt="Solar panels at the ashram" loading="lazy">
+                <img src="images/IMG-20250626-WA0029.jpg" alt="Long pathway leading into the ashram" loading="lazy">
+                <img src="images/IMG-20250626-WA0025.jpg" alt="Wide paved area in ashram grounds" loading="lazy">
+                <img src="images/IMG-20250626-WA0035.jpg" alt="Ashram grounds with large tree and pathway" loading="lazy">
+                <img src="images/IMG-20250626-WA0026.jpg" alt="Open green area with benches" loading="lazy">
+                <img src="images/IMG-20250626-WA0024.jpg" alt="Outdoor seating under trees" loading="lazy">
+                <img src="images/IMG-20250626-WA0030.jpg" alt="Outdoor concrete benches and tables" loading="lazy">
+                <img src="images/IMG-20250626-WA0011.jpg" alt="Group of Swamis and devotees in media room" loading="lazy">
+                <img src="images/IMG-20250626-WA0010.jpg" alt="Portrait of Mahamandaleshwar Shree 1008 Swami Satyamitranand Giriji" loading="lazy">
+                <img src="images/IMG-20250626-WA0013~2.jpg" alt="Portrait of Swami Amrutatmanandji Giri" loading="lazy">
+                <img src="images/IMG-20250626-WA0012.jpg" alt="Portrait of a Swami" loading="lazy">
+                <img src="images/IMG-20250626-WA0033.jpg" alt="Framed portrait of a Swami with Om symbol" loading="lazy">
+                <img src="images/IMG-20250626-WA0032.jpg" alt="Historical photo of group of Swamis" loading="lazy">
+            </div>
+            <p class="call-to-action">For more videos and spiritual discourses, visit our <a href="http://www.youtube.com/channel/UCo_5H0uQTcfh9Rpv9NyoueQ" target="_blank">YouTube Channel</a>.</p>
+
+            <div class="youtube-embed-container">
+                <iframe src="http://www.youtube.com/embed?list=UUo_5H0uQTcfh9Rpv9NyoueQ" allowfullscreen></iframe>
             </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#guru">Guru Parampara</a>
-                <a href="#programs">Programs</a>
-                <a href="#life">Ashram Life</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#location">Location</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
+        </section>
 
-        <section id="hero" class="hero-section">
-            <div class="hero-content">
-                <h2>Discover Your Path to Inner Harmony</h2>
-                <p>Nirvandham Yogashram: Embracing Ancient Wisdom for Modern Peace in Sacred Gujarat.</p>
-                <a href="#programs" class="button">Explore Programs</a>
-            </div>
-        </section>
+        <section id="location" class="section-padded">
+            <h2>Our Location</h2>
+            <p>Nirvandham Yogashram is peacefully situated in:</p>
+            <address>
+                Ranavav, Porbandar, <br>
+                Gujarat, India.
+            </address>
+            <div class="map-container" style="width: 100%; height: 400px; margin-top: 2rem;">
+                <iframe src="https://maps.google.com/?cid=11423591657471097043&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p>The Ashram is easily accessible from major cities in Gujarat. Detailed directions and transportation options can be provided upon inquiry.</p>
+        </section>
 
-        <section id="about" class="section-padded">
-            <h2>About Nirvandham Yogashram</h2>
-            <div class="content-flex">
-                <div class="text-content">
-                    <p>Welcome to Nirvandham Yogashram! Shree Nirvandham Yogashram, nestled in the serene and spiritually rich region of Ranavav, Porbandar, Gujarat, is a sacred sanctuary dedicated to the profound practices of traditional yoga and the pursuit of inner transformation.</p>
+        <section id="contact" class="section-padded background-light">
+            <h2>Contact Us</h2>
+            <p>We welcome your inquiries and look forward to assisting you on your spiritual journey.</p>
+            <p><strong>Phone:</strong> +91 9825230003</p>
+            <p><strong>Email:</strong> <a href="mailto:nirvandhamashram@gmail.com">nirvandhamashram@gmail.com</a></p>
+            <a class="whatsapp-button" href="https://wa.me/919825230003" target="_blank">Chat on WhatsApp</a>
+            <p>For bookings, program details, or any questions, please reach out to us.</p>
+        </section>
 
-                    <p>The Ashram was established by Brahmalin Swami Shree Bhajanprakashanand Giriji in the year 1983, following a Dashnami Sanyas Parampara. It stands as a beacon for those seeking to deepen their spiritual journey through Vedanta, Meditation, and Mindful living.</p>
-
-                    <p>Nirvandham Yogashram is primarily established with an aim to spread the message of our Vedic Sanskriti, to teach people about our Darshanas, and to guide interested individuals in the field of spirituality, which is considered our true religion. We particularly follow Vedantic philosophy and Patanjal Yogdarshan, offering a comprehensive approach to holistic well-being and self-realization.</p>
-                </div>
-                <div class="image-content">
-                    <img src="images/IMG-20250626-WA0019.jpg" alt="Exterior view of Nirvandham Yogashram with Om symbol" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section id="guru" class="section-padded background-light">
-            <h2>Guru Parampara</h2>
-            <div class="content-flex reverse-order-mobile">
-                <div class="image-content">
-                    <img src="images/IMG-20250626-WA0034~2.jpg" alt="Swami Bhajanprakashanand Giri in meditation" loading="lazy">
-                </div>
-                <div class="text-content">
-                    <p>At Nirvandham Yogashram, we are blessed to follow a revered spiritual lineage, honoring the enlightened masters who have guided countless souls towards self-realization. Our practices are deeply influenced by the profound teachings of our beloved Guruji, Barmlin Sadguru Swami Shree Bhajan Prakashanand Giriji Maharaj. The Spiritual wisdom which he earned through his austere Sadhana guides us to move towards Spiritual awakening.</p>
-
-                    <p>Blessings of our Param Guru Brahmalin Swami Satyamitranand Giriji, who established Bharat Mata Mandir Ashram - Haridwar, a Sankaracharya appoint and Mahamandaleshwar remain with us. Swamiji embodied a rare combination of Karmayog, Bhaktiyog, and Gnanyog, offering profound wisdom and compassionate guidance.</p>
-
-                    <p>This lineage ensures that every seeker feels supported on their unique spiritual journey, as our spiritual guides impart wisdom through discourses, guided meditations, and personal consultations, illuminating the path of yoga and inner peace.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="programs" class="section-padded">
-            <h2>Yoga & Spiritual Programs</h2>
-            <div class="program-grid">
-                <div class="program-item">
-                    <h3>Daily Yoga & Meditation</h3>
-                    <p>Engage in structured daily sessions designed to harmonize body, mind, and spirit. Our practices include Hatha Yoga, Pranayama (breathing techniques), and various meditation styles suitable for all levels.</p>
-                </div>
-                <div class="program-item">
-                    <h3>Spiritual Retreats</h3>
-                    <p>Immerse yourself in transformative retreats focusing on specific themes, such as silent meditation, Vedanta studies, or intensive yoga workshops. These programs offer a deeper dive into spiritual wisdom.</p>
-                </div>
-                <div class="program-item">
-                    <h3>Discourses & Satsangs</h3>
-                    <p>Participate in inspiring discourses and satsangs (spiritual gatherings) where ancient scriptures are expounded, and practical wisdom for daily living is shared by revered teachers. You can find materials like satsangs, pravacans, and photos connected to our Guruji.</p>
-                </div>
-                <div class="program-item">
-                    <h3>Wellness & Healing Sessions</h3>
-                    <p>Discover holistic well-being through special sessions aimed at physical and mental rejuvenation, complementing your yogic practice.</p>
-                </div>
-            </div>
-            <p class="call-to-action">For detailed schedules and upcoming retreat dates, please contact us.</p>
-        </section>
-
-        <section id="life" class="section-padded background-light">
-            <h2>Ashram Life Experience</h2>
-            <div class="content-flex">
-                <div class="text-content">
-                    <p>Life at Nirvandham Yogashram is an opportunity to embrace simplicity, mindfulness, and community living. We offer humble and comfortable accommodation designed to facilitate introspection and peace, allowing guests to disconnect from worldly distractions.</p>
-
-                    <p>All meals provided are sattvic – wholesome, vegetarian food prepared with love and care, promoting purity of body and mind. The daily routine includes collective prayers, yoga, meditation, selfless service (karma yoga), and periods of reflection, fostering a disciplined yet enriching environment.</p>
-
-                    <p>Our aim is to provide a supportive atmosphere where individuals can experience a deeper connection with themselves and the spiritual essence of life.</p>
-                </div>
-                <div class="image-content">
-                    <img src="images/IMG-20250626-WA0028.jpg" alt="Lush green lawn and ashram buildings" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section-padded">
-            <h2>What Our Visitors Say</h2>
-            <div class="testimonials-grid">
-                <p>Stay tuned! Testimonials from our cherished visitors will be shared here soon, reflecting their transformative experiences at Nirvandham Yogashram.</p>
-                </div>
-            <p class="call-to-action">Have you visited us? Share your experience by contacting us!</p>
-        </section>
-
-        <section id="gallery" class="section-padded background-light">
-            <h2>Gallery</h2>
-            <p>Explore glimpses of Nirvandham Yogashram – our sacred spaces, daily activities, and the serene environment that fosters spiritual growth.</p>
-            <div class="image-grid">
-                <img src="images/IMG-20250626-WA0017.jpg" alt="Nirvandham Yogashram Main Gate" loading="lazy">
-                <img src="images/IMG-20250626-WA0021.jpg" alt="Main Temple/Prayer Hall Building" loading="lazy">
-                <img src="images/IMG-20250626-WA0020.jpg" alt="Small shrine with red flag" loading="lazy">
-                <img src="images/IMG-20250626-WA0023.jpg" alt="Ashram building with orange roof" loading="lazy">
-                <img src="images/IMG-20250626-WA0018.jpg" alt="Ashram building exterior view" loading="lazy">
-                <img src="images/IMG-20250626-WA0022.jpg" alt="Ashram building with tall trees" loading="lazy">
-                <img src="images/IMG-20250626-WA0031.jpg" alt="Ashram building entrance and porch" loading="lazy">
-                <img src="images/IMG-20250626-WA0027.jpg" alt="Ashram building nestled among trees" loading="lazy">
-                <img src="images/IMG-20250626-WA0016.jpg" alt="Solar panels at the ashram" loading="lazy">
-                <img src="images/IMG-20250626-WA0029.jpg" alt="Long pathway leading into the ashram" loading="lazy">
-                <img src="images/IMG-20250626-WA0025.jpg" alt="Wide paved area in ashram grounds" loading="lazy">
-                <img src="images/IMG-20250626-WA0035.jpg" alt="Ashram grounds with large tree and pathway" loading="lazy">
-                <img src="images/IMG-20250626-WA0026.jpg" alt="Open green area with benches" loading="lazy">
-                <img src="images/IMG-20250626-WA0024.jpg" alt="Outdoor seating under trees" loading="lazy">
-                <img src="images/IMG-20250626-WA0030.jpg" alt="Outdoor concrete benches and tables" loading="lazy">
-                <img src="images/IMG-20250626-WA0011.jpg" alt="Group of Swamis and devotees in media room" loading="lazy">
-                <img src="images/IMG-20250626-WA0010.jpg" alt="Portrait of Mahamandaleshwar Shree 1008 Swami Satyamitranand Giriji" loading="lazy">
-                <img src="images/IMG-20250626-WA0013~2.jpg" alt="Portrait of Swami Amrutatmanandji Giri" loading="lazy">
-                <img src="images/IMG-20250626-WA0012.jpg" alt="Portrait of a Swami" loading="lazy">
-                <img src="images/IMG-20250626-WA0033.jpg" alt="Framed portrait of a Swami with Om symbol" loading="lazy">
-                <img src="images/IMG-20250626-WA0032.jpg" alt="Historical photo of group of Swamis" loading="lazy">
-            </div>
-            <p class="call-to-action">For more videos and spiritual discourses, visit our <a href="http://youtube.com/" target="_blank">YouTube Channel</a>.</p>
-        </section>
-
-        <section id="location" class="section-padded">
-            <h2>Our Location</h2>
-            <p>Nirvandham Yogashram is peacefully situated in:</p>
-            <address>
-                Ranavav, Porbandar, <br>
-                Gujarat, India.
-            </address>
-            <div class="map-container" style="width: 100%; height: 400px; margin-top: 2rem;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3707.4008364779443!2d69.75927527490494!3d21.687153164840783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3957ca2726aaaaab%3A0x9e88c01672ae38d3!2sShri%20Nirvandham%20Yogashram%20Ranavav!5e0!3m2!1sen!2sin!4v1752127432407!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
-            <p>The Ashram is easily accessible from major cities in Gujarat. Detailed directions and transportation options can be provided upon inquiry.</p>
-        </section>
-
-        <section id="contact" class="section-padded background-light">
-            <h2>Contact Us</h2>
-            <p>We welcome your inquiries and look forward to assisting you on your spiritual journey.</p>
-            <p><strong>Phone:</strong> +91 9825230003</p>
-            <p><strong>Email:</strong> <a href="mailto:nirvandhamashram@gmail.com">nirvandhamashram@gmail.com</a></p>
-            <a class="whatsapp-button" href="https://wa.me/919825230003" target="_blank">Chat on WhatsApp</a>
-            <p>For bookings, program details, or any questions, please reach out to us.</p>
-        </section>
-
-        <footer>
-            <p>© 2025 Nirvandham Yogashram. All rights reserved.</p>
-            <p>Developed with devotion.</p>
-        </footer>
-    </div>
+        <footer>
+            <p>© 2025 Nirvandham Yogashram. All rights reserved.</p>
+            <p>Developed with devotion.</p>
+        </footer>
+    </div>
 </body>
 </html>
